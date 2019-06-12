@@ -43,7 +43,7 @@ class ipOnConnectPlugin(octoprint.plugin.SettingsPlugin,
 		if self._settings.get(["useM70"]):
 			message = "M70 P" + self._settings.get(["displayTime"]) + " (" + server_ip + ")"
 		else:
-			message = "M117 " + server_ip
+			message = "M117 Octo:" + server_ip
 		self._printer.commands(message)
 
 	##~~ Softwareupdate hook
